@@ -1,31 +1,102 @@
 function mostrar()
-{
+/* {
 
-  var num;
-  var max;
-  var min;
-  var PrimeraVez=true;
+	var contador=0;
+
 	// declarar variables
+	
+	var respuesta='si';
+
+	while(respuesta!='no')
+	{
+		
+	
+	}
+
+}//FIN DE LA FUNCIÓN */
+
+/*{
+	var contador = 0;
+	var num;
+	var numMax;
+	var numMin;
+
+	while (contador != null) {
+
+		num = prompt("Ingrese un numero");
+
+		if (num == null) {
+			break;
+		}		
+
+		if (isNaN(num)) {
+			alert("Ingresa un numero kpo");
+		} else {
+			num = parseInt(num);
+			if (!numMax || num > numMax) {
+				numMax = num;
+			}
+
+			if (!numMin || num < numMin) {
+				numMin = num;
+			}
+			contador++;
+		}
+	}
+
+	document.getElementById("maximo").value = numMax;
+	document.getElementById("minimo").value = numMin;
+}
+*/
+
+{
+	var contador=0;
+	var num;
+	var numMax;
+	var numMin;
+	var flagNum=true;
+
+	while (contador != null){
+
+		num=prompt("Ingrese un numero");
+
+		if(num==null){
+			
+			break;
+		}
+		if(isNaN(num)){
+			
+			alert("Ingresa un numero kpo");
+			
+		}else {
+			num=parseInt(num);
+		
+		if (flagNum){
+		
+			numMin=num;
+			numMax=num;
+			flagNum=false;
+
+		 }else if (num>numMax) {
+
+			 numMax=num;
+
+		 } if (num<numMin){
+
+			 numMin=num;
+
+		 }
+
+		 contador++;
 
 
-	while (prompt("Ingrese los numeros")) {
-	do{
-    num=prompt("ingrese numero");
-    num=parseInt(num);
-
-  } while (isNaN(num));
-
-    if (PrimeraVez) {
-      PrimeraVez=false;
-      max=num;
-      min=num;
-
-	}else{
-
-
-  }
+		}
+		
+		}
+		
+		document.getElementById("maximo").value=numMax;
+		document.getElementById("minimo").value=numMin;
+	}
 
 
 
-
-}//FIN DE LA FUNCIÓN
